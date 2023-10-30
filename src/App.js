@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import Numero from './Numero';
+import ListComent from './ListComent';
+import Galo from './Galo';
+import ConsumoCombustivel from './ConsumoCombustivel';
 
 function App() {
   return (
@@ -9,6 +13,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Numero></Numero>
+        <ListComent></ListComent>
+        
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -17,7 +24,12 @@ function App() {
         >
           Learn React
         </a>
+        
       </header>
+      <ConsumoCombustivel></ConsumoCombustivel>
+      <Galo></Galo>
+      
+      
     </div>
   );
 }

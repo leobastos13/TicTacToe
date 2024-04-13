@@ -85,7 +85,7 @@ const TicTacToe = () => {
 
     return (
         <div className='div_game'>
-            <h1>Tic Tac Toe</h1>
+            <h1>Tic Tac Toe!</h1>
             <div className='board'>
                 {board.map((item, index) => (
                     <div 

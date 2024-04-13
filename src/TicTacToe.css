@@ -7,9 +7,8 @@ h1 {
     text-align: center;
 }
 
-.div_galo {
+.div_game {
     margin: 0;
-    
     padding: 0 0 100px 0;
     box-sizing: border-box;
     display: grid;

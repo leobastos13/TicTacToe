@@ -1,10 +1,10 @@
 import React from 'react';
 import {useState} from 'react';
 import { useEffect } from 'react';
-import './Galo.css'; 
+import './TicTacToe.css'; 
 import Result from './Result';
 
-const Galo = () => {
+const TicTacToe = () => {
 
     const [board, setBoard] = useState(Array(9).fill(""));
     const [currentPlayer, setCurrentPlayer] = useState("X");
@@ -12,7 +12,6 @@ const Galo = () => {
 
     const CellClick = (cell) => {
         if (winner) {
-            //console.log("Jogo finalizado")
             return null;
         }
 
@@ -52,11 +51,11 @@ const Galo = () => {
         wins.forEach(cells => {
             if (cells.every(cell => cell === "O")) {
                 setWinner("O");
-                console.log("O venceu");
+                console.log("O wins");
             }
             if (cells.every(cell => cell === "X")) {
                 setWinner("X");
-                console.log("X venceu");
+                console.log("X wins");
             }
         })
         checkDraw();
@@ -64,7 +63,7 @@ const Galo = () => {
 
     const checkDraw = () => {
         if (board.every(cell => cell !== "")) {
-            setWinner(`Empatou`);
+            setWinner(`tie`);
         }
     }
 
@@ -77,16 +76,16 @@ const Galo = () => {
     }
 
     const Message = () => {
-        if (winner === "Empatou") {
-            return <h3> Empate!</h3>;
+        if (winner === "tie") {
+            return <h3> It's a tie!</h3>;
         } else  {
-            return <h3>Ganhou o {winner}!</h3>
+            return <h3>The winner is {winner}!</h3>
         }
     }
 
     return (
-        <div className='div_galo'>
-            <h1>Jogo do Galo</h1>
+        <div className='div_game'>
+            <h1>Tic Tac Toe</h1>
             <div className='board'>
                 {board.map((item, index) => (
                     <div 
@@ -110,4 +109,4 @@ const Galo = () => {
         
     )
 } 
-export default Galo;
+export default TicTacToe;

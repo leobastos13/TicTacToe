@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Numero from './Numero';
 import ListComent from './ListComent';
-import Galo from './Galo';
+import TicTacToe from './TicTacToe';
 import ConsumoCombustivel from './ConsumoCombustivel';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
         
       </header>
       <ConsumoCombustivel></ConsumoCombustivel>
-      <Galo></Galo>
+      <TicTacToe></TicTacToe>
       
       
     </div>
